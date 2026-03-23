@@ -15,11 +15,14 @@ Assurez-vous d'avoir Python installé, puis exécutez :Bashpip install flask fla
 Initialisation de la base de données :Le code est configuré pour créer automatiquement le fichier blog.db au premier lancement.Lancement du serveur :Bashpython app.py
 
 L'API sera disponible sur http://127.0.0.1:5000. 
+
 Documentation des Endpoints1. 
+
 ArticlesMéthodeEndpointDescriptionPOST/api/articlesCréer un nouvel articleGET/api/articles Lister tous les articles (Filtres possibles : auteur, date)GET/api/articles/<id> Récupérer un article spécifique via son 
 IDPUT/api/articles/<id> Modifier un article existant
 DELETE/api/articles/<id> Supprimer un article
-GET/api/articles/searchRechercher par titre (Paramètre titre requis)🧪 Exemples d'utilisation (JSON)Création d'un article 
+GET/api/articles/searchRechercher par titre (Paramètre titre requis)🧪 Exemples d'utilisation (JSON)Création d'un article
+
 
 (POST /api/articles)Payload :JSON{
     "titre": "Mon premier article",
@@ -32,6 +35,7 @@ Modification d'un article (PUT /api/articles/2)Payload :JSON{
     "auteur": "Wansi"
 }
 Recherche d'un article (GET /api/articles/search?titre=premier) Renvoie la liste des articles dont le titre contient "premier".
+
 Codes de réponse HTTP gérés
 200 OK : Requête réussie.
 201 Created : Article créé avec succès.
